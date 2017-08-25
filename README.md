@@ -1,3 +1,2 @@
 # ques_v4
-version 4
-Editer
+ques version 4 for people
