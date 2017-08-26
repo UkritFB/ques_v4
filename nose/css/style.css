@@ -1,0 +1,101 @@
+.tabsdemoDynamicHeight md-content 
+{
+     background-color: transparent !important;   
+
+		
+}
+/********************************************************************************************/
+.tabsdemoDynamicHeight md-content md-tabs 
+{
+   
+    background:#DCDCDC;
+  /**  background: #fff;/***#f6f6f6****/  **/
+    border: 2px black; 
+    color: black;
+	height: 900px;
+ 
+}
+/********************************************************************************************/
+.tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper
+{
+    background:#F5FFFA; /** สีเมนู  **/
+    column-rule-color: aqua;
+}
+/********************************************************************************************/
+.tabsdemoDynamicHeight md-content h1:first-child 
+{
+   margin-top: 0px; /**ระยะห่างจากชื่อ menu จากด้านบน **/
+}
+/********************************************************************************************/
+.head-menu
+{
+    color: #66CDAA;
+    font-family: 'Kanit', sans-serif;;
+    text-shadow: 2px 3px 6px black;
+    padding-top: 35px;
+    text-align: center;
+    font-size: 50px;
+   
+}
+.body-menu
+{
+    color: black;
+    font-family: 'Kanit', sans-serif;;
+    text-shadow: 2px 2px 4px #808080;
+    text-align: center;
+    font-size: 30px;
+   
+}
+.menu-radio
+{
+    color: black;
+    font-family: 'Kanit', sans-serif;;
+    text-shadow: 2px 2px 4px #808080;
+
+    padding-left: 47%; 
+   
+    font-size: 20px;
+   
+}
+footer
+{
+	color: #696969;
+	background: #fff;
+    padding:0.5% 0.5%;
+	
+    height: 20px;
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Barrio', cursive;
+    
+    
+}
+.radioButtondemoBasicUsage
+{
+    text-align: center;
+}
+body
+{
+	background: #DCDCDC;   
+    
+}
+ti
+{
+	padding-bottom: 0px;
+}
+
+/***********************************************************************************************/
+.menu-radio2
+{
+	height:  350px;
+	width:  250px;
+	overflow-y: scroll;
+    color: black;
+    font-family: 'Kanit', sans-serif;;
+    text-shadow: 2px 2px 4px #808080;
+	
+    padding-left: 45%; 
+   
+    font-size: 20px;
+   
+}

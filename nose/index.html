@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Small Tester</title>
+        <!-----------------------------------------------------------------------------CSS--------------------------------------------------------------------------------------------->
+         <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400 italic">   -->
+         <!-- <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.1/docs.css'> -->
+        <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css'>   <!-- จำเป็น  จัดรูปแบบ หน้าเว็บ-->
+        <link rel='stylesheet prefetch' href='css/main.css'> 
+        <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+      
+        
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Sriracha" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Bahiana|Barrio|Indie+Flower|Tangerine" rel="stylesheet">
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </head>
+    <body>
+        <div ng-cloak="" class="tabsdemoDynamicHeight" ng-app="MyApp">
+        	<md-content>
+            <md-tabs md-dynamic-height="15" md-border-bottom="10">
+			
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="กลิ่น">
+                <h1 class="head-menu">กลิ่นที่ได้กลิ่น</h1>
+					<test>
+                			<div class="menu-radio2" ng-app="MyApp" >
+                                                <md-radio-group ng-model="data.group2">
+                                                        <md-radio-button value="กลิ่นฉุนแสบจมูก" >กลิ่นฉุนแสบจมูก</md-radio-button>
+                                                        <md-radio-button value="กลิ่นแอมโมเนีย" >กลิ่นแอมโมเนีย</md-radio-button>
+                                                        <md-radio-button value="กลิ่นปลาเน่า,เนื้อเน่า">กลิ่นปลาเน่า,เนื้อเน่า</md-radio-button>
+                                                        <md-radio-button value="กลิ่นล้ายน้ำมันเบนซิน">กลิ่นล้ายน้ำมันเบนซิน</md-radio-button>
+														<md-radio-button value="กลิ่นน้ำยาฟอกขาว" >กลิ่นน้ำยาฟอกขาว</md-radio-button>
+                                                        <md-radio-button value="กลิ่นคล้ายเนย" >กลิ่นคล้ายเนย</md-radio-button>
+                                                        <md-radio-button value="กลิ่นการบูร">กลิ่นการบูร</md-radio-button>
+                                                        <md-radio-button value="กลิ่นน้ำยาดองศพ">กลิ่นน้ำยาดองศพ</md-radio-button>
+														<md-radio-button value="กลิ่นเหม็นชวนสำลัก" >กลิ่นเหม็นชวนสำลัก</md-radio-button>
+													
+                                                </md-radio-group>
+                           
+                        	</div>
+				</test>
+				<p class="body-menu">กลิ่นที่คุณลือก : <span class="radioValue">{{data.group2}}</span></p>
+            </md-tab>
+        
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="ระดับกลิ่น">
+                 <h1 class="head-menu" >ระดับกลิ่น</h1>
+                <md-content>
+                           <div class="menu-radio" ng-app="MyApp" >
+                                                <md-radio-group ng-model="data.group3">
+                                                        <md-radio-button value="ระดับ 1">ระดับ 1</md-radio-button>
+                                                        <md-radio-button value="ระดับ 2">ระดับ 2</md-radio-button>
+                                                        <md-radio-button value="ระดับ 3">ระดับ 3</md-radio-button>
+                                                        <md-radio-button value="ระดับ 4">ระดับ 4</md-radio-button>
+													 	<md-radio-button value="ระดับ 5">ระดับ 5</md-radio-button>
+                                                </md-radio-group>
+                           
+					</div>         
+                </md-content>
+                <p class="body-menu">ระดับกลิ่นที่คุณเลือก : {{data.group3}}</p>
+            </md-tab>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="ระยะเวลา">
+                <h1 class="head-menu">ระยะเวลาที่ได้กลิ่น</h1>
+                <md-content >
+                     <div class="menu-radio" ng-app="MyApp" >
+                                                <md-radio-group ng-model="data.group1">
+                                                        <md-radio-button value="0-5   นาที" >0-5   นาที</md-radio-button>
+                                                        <md-radio-button value="6-10  นาที" >6-10  นาที</md-radio-button>
+                                                        <md-radio-button value="11-15 นาที ">11-15 นาที</md-radio-button>
+                                                        <md-radio-button value="16-20 นาที ">16-20 นาที</md-radio-button>
+                                                </md-radio-group>
+                           
+                        </div>
+                </md-content>
+                 <p class="body-menu">คุณได้เลือกช่วงเวลา :  <span class="radioValue">{{data.group1}}</span> </p>
+            </md-tab>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="ส่งแบบสำรวจ" class="m_style"> 
+                 <h1 class="head-menu">ตรวจสอบความถูกต้องของแบบสำรวจ</h1>
+               
+                    <h1 class="body-menu">คุณได้เลื่อกกลิ่น      : {{data.group2}}</h1>
+                    <h1 class="body-menu">ระดับกลิ่นที่คุณเลือก   : {{data.group3}}</h1>
+                    <h1 class="body-menu">คุณได้เลือกช่วงเวลา   :  <span class="radioValue">{{data.group1}}</span> </h1>
+                
+              
+                 <md-button class="md-raised md-primary" ng-href="http://www.ezsens.net/info/nose">ส่งแบบสำรวจ</md-button>
+                
+            </md-tab>  
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </md-tabs>
+  </md-content>
+</div>
+ <!------------------------------------------------------------------------------JAVA SCRIPT--------------------------------------------------------------------------------------->       
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js'></script>
+<script src='js/index2.js'></script>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->     <!-- <ti>
+        <footer>
+            <b>Coppy&copy; by Ukrit</b>
+        </footer>
+		</ti>  -->
+    </body>
+</html>

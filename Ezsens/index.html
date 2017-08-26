@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Small Tester</title>
+        <!-----------------------------------------------------------------------------CSS--------------------------------------------------------------------------------------------->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  
+        <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.css'>
+        <link rel='stylesheet prefetch' href='https://material.angularjs.org/1.1.1/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/style3.css">
+        <link rel="stylesheet" href="css/style4.css">
+        <link rel="stylesheet" href="css/style5.css">
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+  
+    </head>
+    <body>
+   
+        <div ng-cloak="" class="tabsdemoDynamicHeight" ng-app="MyApp">
+        <md-content>
+        <md-tabs md-dynamic-height="" md-border-bottom="">
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="กลิ่น">
+                <div ng-controller="SelectAsyncController" layout="column" layout-align="center center" style="padding:40px" ng-cloak="" class="selectdemoOptionsWithAsyncSearch" ng-app="MyApp">
+                        <md-content class="md-padding">
+                            <h1 class="tu">กลิ่นที่ได้กลิ่น</h1>
+                            <div layout="column" layout-align="center center">
+                                    <md-select placeholder="กรุณาเลือกกลิ่น" ng-model="user" md-on-open="loadUsers()" style="min-width: 200px;" name="n_val">
+                                        <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+                                    </md-select>
+                                    <p class="md-caption">You have assigned the task to: {{ user ? user.name : 'No one yet' }}</p>
+                                <?php
+                                $n_v = $_POST['n_val'];
+                                
+                            echo "$n_v";
+                                ?>
+                            </div>
+                        </md-content>
+                </div>
+                
+            </md-tab>
+        
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="ระดับกลิ่น">
+                <md-content class="md-padding" style="margin: 15px; padding:16px 200px" >
+                     <h1 class="tu" >ระดับกลิ่น</h1>
+                    <md-slider flex="" md-discrete="" ng-model="rating1" step="1" min="0" max="100" aria-label="rating" name="val"></md-slider>
+                </md-content>
+               <?php
+
+                    echo "val";
+                ?>
+            </md-tab>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="ระยะเวลา">
+                <md-content class="md-padding">
+                    <h1 class="tu">ช่วงเวลาที่ได้กลิ่น</h1>
+                     <div flex-gt-xs="" ng-controller="SelectAsyncController" layout="column" layout-align="center center" style="padding:40px" ng-cloak="" class="selectdemoOptionsWithAsyncSearch" ng-app="MyApp">
+                        <md-datepicker ng-model="myDate" md-placeholder="Enter date" ></md-datepicker>
+                         <inputr  type="datetime"></inputr>
+                    </div>
+                </md-content>
+            </md-tab>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <md-tab label="ส่งแบบสำรวจ"> 
+            <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="" class="md-padding">
+                <md-button class="md-raised md-primary">ส่งแบบสำรวจ</md-button>
+            </section>
+            </md-tab>  
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    </md-tabs>
+  </md-content>
+</div>
+ <!------------------------------------------------------------------------------JAVA SCRIPT--------------------------------------------------------------------------------------->       
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.1/angular-material.js'></script>
+        
+<script src='js/index2.js'></script>
+<script src='js/index4.js'></script>
+<script src='js/index5.js'></script>
+        
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->       
+    
+      
+
+    </body>
+</html>
